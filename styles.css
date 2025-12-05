@@ -66,6 +66,7 @@ section .infos {
 }
 
 .info {
+  background-color: blueviolet;
   padding: var(--space-sm) var(--space-md);
   border: 1px solid var(--border-primary-color);
   border-radius: var(--border-radius-sm);
@@ -73,6 +74,14 @@ section .infos {
 
 .board {
   border: 1px solid var(--border-primary-color);
-  display: flex;
   flex-grow: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(30px, 1fr));
+}
+
+.block {
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--border-primary-color);
 }
