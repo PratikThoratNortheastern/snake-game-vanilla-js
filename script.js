@@ -12,10 +12,11 @@ let food = {
   x: Math.floor(Math.random() * rows),
   y: Math.floor(Math.random() * columns),
 };
-
-Object.values(food).forEach((value) => {});
-
+let startButton = document.querySelector(".btn-start");
+const modal = document.querySelector(".modal");
 let direction = "down";
+
+// Start Game
 
 // Adding blocks based on the size of board div
 for (let row = 0; row < rows; row++) {
@@ -70,9 +71,12 @@ function renderSnake() {
   });
 }
 
-intervalId = setInterval(() => {
-  // renderSnake();
-}, 500);
+startButton.addEventListener("click", () => {
+  modal.style.display = "none";
+  intervalId = setInterval(() => {
+    renderSnake();
+  }, 500);
+});
 
 addEventListener("keydown", (event) => {
   if (event.key == "ArrowUp") {
