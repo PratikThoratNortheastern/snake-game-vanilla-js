@@ -125,9 +125,14 @@ section .infos {
   align-items: center;
 }
 
-.modal .start-game {
+.modal .start-game,
+.modal .restart-game {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: var(--space-lg);
+}
+
+.modal .restart-game {
+  display: none;
 }
